@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<style>
+		#TestArea {color:black;}
+	</style>
+
+
+</head>
+
+
+<body>
+
+<!-- Show number variables ------------------------------ -->
+<div>
+	<h1>Question 1</h1>
+
+	var a;<br>
+	a=2;<br>
+
+	var b=3;<br>
+
+	var c=5; <br>
+	var d=b+c;<br>
+	var e=a**c;<br>
+	var f=a*b*c;<br>
+	<button onclick="Click1()">Click here to see the results</button>
+		<script>
+			var a;
+			a=2;
+
+			var b=3;
+
+			var c=5;
+			var d=b+c;
+			var e=a**c;
+			var f=a*b*c;
+				d=b+c;
+				function Click1() {
+					document.getElementById("results1").innerHTML +="d is "+d+"<br>";
+					document.getElementById("results1").innerHTML +="e is "+e+"<br>";
+					document.getElementById("results1").innerHTML +="f is "+f+"<br>";
+							}
+		</script>
+		
+	<div id="results1"></div>
+	<hr>
+</div>
+<br>
+<br>
+
+
+<!-- Show string variables ------------------------------ -->
+<div>
+	<h1>Question 2</h1>
+	var name1="Andrew"; <br>
+	var name2="MacDougald"; <br>
+	var num1="20"; <br>
+	var num2="2"; <br>
+	var num3=5; <br>
+	name1+name2;   //Adds 2 strings words  <br>
+	name1+num2;	//Adds name and string number  <br>
+	num1+num2;	//Adds two string numbers  <br>
+	num1+num3;	//Adds string number and real number  <br>
+	Number(num1)+num3  //Same as above but string has been converted to a number  <br>
+	num1*num2;	//Multiplies strings numbers together  <br>
+	num1*num3;	//Multiplies string number and real number together  <br>
+	<br>	
+
+	<button onclick="Click2()">Click here to see the results</button>
+		<script>
+
+			var name1="Andrew"; 
+			var name2="MacDougald";  
+			var num1="20";  
+			var num2="2"; 
+			var num3=5;  
+				function Click2() {
+					document.getElementById("results2").innerHTML +='name1+name2 is '+name1+name2+"<br>";  //Adds 2 strings words
+					document.getElementById("results2").innerHTML +='name1+num2 is '+name1+num2+"<br>";	//Adds name and string number
+					document.getElementById("results2").innerHTML +='num1+num2 is '+num1+num2+"<br>";	//Adds two string numbers
+					document.getElementById("results2").innerHTML +='num1+num3 is '+num1+num3+"<br>";	//Adds string number and real number
+					document.getElementById("results2").innerHTML +='parseInt(num1,10)+num3 is ';
+					document.getElementById("results2").innerHTML +=parseInt(num1,10)+num3+"     **NOTE:  Had to do in 2 parts here"+"<br>";  //Same as above but string has been converted to a number
+					/*  For some strange reason, when I tried to combine the text prior to parseInt()
+					it would not work.  I had to write the text first, then write the parseInt() after
+					using a separate innerHTML.  Doesn't make much sense due to the fact that I didn't
+					have to do that for the others.  When writing to console.log('text',parseInt()) worked. */
+					
+					document.getElementById("results2").innerHTML +='num1*num2 is '+num1*num2+"<br>";	//Multiplies strings numbers together
+					document.getElementById("results2").innerHTML +='num1*num3 is '+num1*num3+"<br>";	//Multiplies string number and real number together
+							}
+		</script>
+		
+	<div id="results2"></div>
+	<hr>
+</div>
+<br>
+<br>
+
+<!-- Show array/list variables ------------------------------ -->
+<div>
+	<h1>Question 3</h1>
+		var NumberArray;  <br>
+		NumberArray=[1,2,3,4,5];  <br>
+		
+		var	WordArray;  <br>
+		WordArray=['Mr.MacDougald', 'Spencer', 'Sunny','Wendy','Fred'];  //indexes the same as python  <br>
+		  <br>
+				
+		var MixArray=['A few words!',40,'More words!',800,10]; <br>
+		<br>
+		<br>
+		NumberArray;  <br>
+		WordArray;  <br>
+		MixArray;  <br>
+		NumberArray.length;  <br>
+		WordArray[2];  <br>
+		WordArray.reverse();  <br>
+		WordArray.join();  <br>
+		WordArray.join(99);  <br>
+		WordArray.join("");  <br>
+		<br>
+		<br>	
+	
+	
+	<button onclick="Click3()">Click here to see the results</button>
+		<script>
+			var NumberArray;
+			NumberArray=[1,2,3,4,5];
+			
+			var	WordArray;
+			WordArray=['Mr.MacDougald', 'Spencer', 'Sunny','Wendy','Fred'];  //indexes the same as python
+					//     0				1		   2	  3		 4
+					
+			var MixArray=['A few words!', 40, 'More words!' ,800 ,10];
+		
+			
+				function Click3() {
+						document.getElementById("results3").innerHTML +=NumberArray+'<br>';
+						document.getElementById("results3").innerHTML +=WordArray+'<br>';
+						document.getElementById("results3").innerHTML +=MixArray+'<br>';
+						document.getElementById("results3").innerHTML +='The length of the number array is '+NumberArray.length+'<br>';
+						document.getElementById("results3").innerHTML +=WordArray[2]+'<br>';
+						document.getElementById("results3").innerHTML +=WordArray.reverse()+'<br>';
+						document.getElementById("results3").innerHTML +=WordArray.join()+'<br>';
+						document.getElementById("results3").innerHTML +=WordArray.join(99)+'<br>';
+						document.getElementById("results3").innerHTML +=WordArray.join("")+'<br>';
+						}
+		</script>
+		
+	<div id="results3"></div>
+	<hr>
+</div>
+</body>
+
+</html>
